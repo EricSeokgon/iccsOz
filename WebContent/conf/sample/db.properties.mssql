@@ -1,0 +1,19 @@
+#
+#  sample configuraion for MS-SQL
+#
+
+mssql_example.vendor=mssql
+mssql_example.serverAddress=127.0.0.1
+mssql_example.portNo=1433
+mssql_example.dbName=newintra
+mssql_example.user=sa
+mssql_example.password=
+mssql_example.maxconns=20
+mssql_example.initconns=5
+mssql_example.timeout=5
+mssql_example.doConnectionCheck=false
+mssql_example.sessionQuery=
+mssql_example.doConnectionCheck=
+mssql_example.testQueryString=
+mssql_example.decodecharset=
+mssql_example.encodecharset=

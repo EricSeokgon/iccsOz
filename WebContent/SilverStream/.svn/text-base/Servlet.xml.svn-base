@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?AgMetaXML 1.0?>
+<obj_ImportOptions>
+  <obj_ObjectOptions>
+    <Persistent type="Integer">1</Persistent>
+    <Active type="Integer">1</Active>
+    <obj_Servlet>
+      <URLs type="StringArray">
+        <el>OZServlet</el>
+      </URLs>
+    </obj_Servlet>
+  </obj_ObjectOptions>
+</obj_ImportOptions>

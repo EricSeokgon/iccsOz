@@ -1,0 +1,19 @@
+<html>
+<head>
+    <script language = "JavaScript" src = "http://127.0.0.1:8080/ozviewer_browers.js"></script>
+</head>
+<body>
+
+<div id = "RunOZViewer">
+    <script language = "JavaScript">
+        Initialize_OZViewer("OZReportViewer", "CLSID:0DEF32F8-170F-46f8-B1FF-4BF7443F5F25", "98%", "98%", "application/OZRViewer");
+        Insert_OZViewer_Param("connection.servlet", "http://127.0.0.1:8080/oz51/server");
+        Insert_OZViewer_Param("connection.reportname", "category_path/sample.ozr");
+        Insert_OZViewer_Param("viewer.isframe", "false");
+        Insert_OZViewer_Param("viewer.namespace", "custom_namespace\\ozviewer");
+        Start_OZViewer();
+    </script>
+</div>
+
+</body>
+</html>

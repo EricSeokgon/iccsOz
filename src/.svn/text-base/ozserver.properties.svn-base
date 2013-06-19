@@ -1,0 +1,23 @@
+#-------------------------------------------
+# Main configuration of ozserver/ozservlet
+#-------------------------------------------
+
+path.oz.server.home=%OZ_RUNNING_PATH%
+
+path.license.file=%OZ_HOME%/license/ozlicense.xml
+path.xml.properties.file=%OZ_HOME%/conf/xml.properties
+path.log.properties.file=%OZ_HOME%/conf/log.properties
+path.securitypolicy.properties.file=%OZ_HOME%/conf/spmgr.properties
+path.connpool.properties.file=%OZ_HOME%/conf/db.properties
+path.cache.properties.file=%OZ_HOME%/conf/cachemngr.properties
+path.monitor.properties.file=%OZ_HOME%/conf/monitor.properties
+path.repository.properties.file=%OZ_HOME%/conf/repository.properties
+path.usl.properties.file=%OZ_HOME%/conf/uslmngr.properties
+path.schedule.properties.file=%OZ_HOME%/conf/srmngr.properties
+path.sapclient.properties.file=%OZ_HOME%/conf/sap.properties
+path.databind.properties.file=%OZ_HOME%/conf/databind.properties
+path.ozservice.properties.file=%OZ_HOME%/conf/ozservice.properties
+path.ozdbconfig.properties.file=%OZ_HOME%/conf/dbconfig.xml
+path.ozudl.properties.file=%OZ_HOME%/conf/ozudl.properties
+path.datasource.properties.file=%OZ_HOME%/conf/datasource.properties
+path.mail.properties.file=%OZ_HOME%/conf/mail.properties

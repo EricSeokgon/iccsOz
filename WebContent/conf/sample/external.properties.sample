@@ -1,0 +1,8 @@
+#-------------------------------------------
+# configuration of external module
+#-------------------------------------------
+
+<ProtocolVersion>.active=false
+<ProtocolVersion>.description=
+<ProtocolVersion>.classname=
+

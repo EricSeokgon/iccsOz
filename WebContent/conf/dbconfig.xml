@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBCONNECTION_INFORMATION xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dbconfig.xsd">
+	<VENDOR NAME="oracle">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">ORACLE</LABEL>
+		</DISPLAYNAME>
+		<DRIVER SUPPORTFUNCTION="TRUE">
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<JAVA>oracle.jdbc.driver.OracleDriver</JAVA>
+			<NET>System.Data.OracleClient.OracleConnection</NET><!--Oracle.DataAccess.Client.OracleConnection-->
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<JAVA>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(HOST={serverAddress})(PROTOCOL=tcp)(PORT={portNo}))(CONNECT_DATA=(SID={sid})))</JAVA>
+			<NET>Data Source={sid};User ID={user};Password={password};</NET>
+		</URL>
+		<HANDLER>
+			<JAVA>com.forcs.db.OZGeneralHandler</JAVA>
+			<NET>com.forcs.db.OZOracleHandler</NET>
+		</HANDLER>
+		<PARAMETER_FLAG>
+			<JAVA>?</JAVA>
+			<NET>:</NET>
+		</PARAMETER_FLAG>
+		<ITEMS>
+			<ITEM KEY="serverAddress">
+				<LABEL LANG="en_us">Database server IP Address</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 IP 주소</LABEL>
+				<LABEL LANG="ja_jp">Database server IP Address</LABEL>
+			</ITEM>
+			<ITEM KEY="portNo" DEFAULTVALUE="1521">
+				<LABEL LANG="en_us">Database server port number</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 포트 번호</LABEL>
+				<LABEL LANG="ja_jp">Database server port number</LABEL>
+			</ITEM>
+			<ITEM KEY="sid" DEFAULTVALUE="ORCL">
+				<LABEL LANG="en_us">SID</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 이름</LABEL>
+				<LABEL LANG="ja_jp">SID</LABEL>
+			</ITEM>
+		</ITEMS>
+		<ADDITIONAL>
+			<FIELDTYPES>
+				<FIELDTYPE NAME="DATE">DATE</FIELDTYPE><!-- 생략하면, DATE, 기본타입 있는 그대로 사용한다. -->
+			</FIELDTYPES>
+			<INFOS>
+				<INFO KEY="DATE_EXPRESSION">TO_DATE('@YYYY/@MM/@DD @hh:@mm:@ss', 'YYYY/MM/DD hh24:mi:ss')</INFO>
+				<INFO KEY="LIKE_QUERY">like</INFO>
+				<INFO KEY="LIKE_DELEMETER">%</INFO>
+			</INFOS>
+		</ADDITIONAL>
+	  <MARS ACTIVE="true" MAJOR_VERSION="1" MINOR_VERSION="1"/>
+	</VENDOR>
+	<VENDOR NAME="mssql">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">MS-SQL</LABEL>
+		</DISPLAYNAME>
+		<DRIVER SUPPORTFUNCTION="FALSE">
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<JAVA>com.microsoft.jdbc.sqlserver.SQLServerDriver</JAVA>
+			<NET>System.Data.SqlClient.SqlConnection</NET>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<JAVA>jdbc:microsoft:sqlserver://{serverAddress}:{portNo};DatabaseName={dbName};SelectMethod=Cursor</JAVA>
+			<NET>Network Library=DBMSSOCN;Data Source={serverAddress},{portNo};Initial Catalog={dbName};User ID={user};Password={password};</NET>
+		</URL>
+		<HANDLER>
+			<JAVA>com.forcs.db.OZMSSQLHandler</JAVA>
+			<NET>com.forcs.db.OZMssqlHandler</NET>
+		</HANDLER>
+		<PARAMETER_FLAG>
+			<NET>@</NET>
+		</PARAMETER_FLAG>
+		<ITEMS>
+			<ITEM KEY="serverAddress">
+				<LABEL LANG="en_us">Database server IP Address</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 IP 주소</LABEL>
+				<LABEL LANG="ja_jp">Database server IP Address</LABEL>
+			</ITEM>
+			<ITEM KEY="portNo" DEFAULTVALUE="1433">
+				<LABEL LANG="en_us">Database server port number</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 포트 번호</LABEL>
+				<LABEL LANG="ja_jp">Database server port number</LABEL>
+			</ITEM>
+			<ITEM KEY="dbName" DEFAULTVALUE="master">
+				<LABEL LANG="en_us">Database name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 이름</LABEL>
+				<LABEL LANG="ja_jp">Database name</LABEL>
+			</ITEM>
+		</ITEMS>
+		<ADDITIONAL>
+			<FIELDTYPES>
+				<FIELDTYPE NAME="DATE">DATETIME</FIELDTYPE>
+			</FIELDTYPES>
+			<INFOS>
+				<INFO KEY="DATE_EXPRESSION">CAST('@YYYY.@MM.@DD @hh:@mm:@ss' AS DATETIME)</INFO>
+			</INFOS>
+		</ADDITIONAL>
+	</VENDOR>
+	<VENDOR NAME="mssql2005">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">MS-SQL</LABEL>
+		</DISPLAYNAME>
+		<DRIVER>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<JAVA>com.microsoft.sqlserver.jdbc.SQLServerDriver</JAVA>
+			<NET>System.Data.SqlClient.SqlConnection</NET>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<JAVA>jdbc:sqlserver://{serverAddress}:{portNo};DatabaseName={dbName}</JAVA>
+			<NET>Network Library=DBMSSOCN;Data Source={serverAddress},{portNo};Initial Catalog={dbName};User ID={user};Password={password};</NET>
+		</URL>
+		<HANDLER>
+			<JAVA>com.forcs.db.OZMSSQLHandler</JAVA>
+			<NET>com.forcs.db.OZMssqlHandler</NET>
+		</HANDLER>
+		<PARAMETER_FLAG>
+			<NET>@</NET>
+		</PARAMETER_FLAG>
+		<ITEMS>
+			<ITEM KEY="serverAddress">
+				<LABEL LANG="en_us">Database server IP Address</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 IP 주소</LABEL>
+				<LABEL LANG="ja_jp">Database server IP Address</LABEL>
+			</ITEM>
+			<ITEM KEY="portNo" DEFAULTVALUE="1433">
+				<LABEL LANG="en_us">Database server port number</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 포트 번호</LABEL>
+				<LABEL LANG="ja_jp">Database server port number</LABEL>
+			</ITEM>
+			<ITEM KEY="dbName" DEFAULTVALUE="master">
+				<LABEL LANG="en_us">Database name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 이름</LABEL>
+				<LABEL LANG="ja_jp">Database name</LABEL>
+			</ITEM>
+		</ITEMS>
+		<ADDITIONAL>
+			<FIELDTYPES>
+				<FIELDTYPE NAME="DATE">DATETIME</FIELDTYPE>
+			</FIELDTYPES>
+			<INFOS>
+				<INFO KEY="DATE_EXPRESSION">CAST('@YYYY.@MM.@DD @hh:@mm:@ss' AS DATETIME)</INFO>
+			</INFOS>
+		</ADDITIONAL>
+	</VENDOR>
+	<VENDOR NAME="mssql2005_mars">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">MS-SQL</LABEL>
+		</DISPLAYNAME>
+		<DRIVER>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<NET>System.Data.SqlClient.SqlConnection</NET>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<NET>Network Library=DBMSSOCN;Data Source={serverAddress},{portNo};Initial Catalog={dbName};User ID={user};Password={password};MultipleActiveResultSets=True</NET>
+		</URL>
+		<HANDLER>
+			<NET>com.forcs.db.OZMssqlHandler</NET>
+		</HANDLER>
+		<PARAMETER_FLAG>
+			<NET>@</NET>
+		</PARAMETER_FLAG>
+		<ITEMS>
+			<ITEM KEY="serverAddress">
+				<LABEL LANG="en_us">Database server IP Address</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 IP 주소</LABEL>
+				<LABEL LANG="ja_jp">Database server IP Address</LABEL>
+			</ITEM>
+			<ITEM KEY="portNo" DEFAULTVALUE="1433">
+				<LABEL LANG="en_us">Database server port number</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 포트 번호</LABEL>
+				<LABEL LANG="ja_jp">Database server port number</LABEL>
+			</ITEM>
+			<ITEM KEY="dbName" DEFAULTVALUE="master">
+				<LABEL LANG="en_us">Database name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 이름</LABEL>
+				<LABEL LANG="ja_jp">Database name</LABEL>
+			</ITEM>
+		</ITEMS>
+		<ADDITIONAL>
+			<FIELDTYPES>
+				<FIELDTYPE NAME="DATE">DATETIME</FIELDTYPE>
+			</FIELDTYPES>
+			<INFOS>
+				<INFO KEY="DATE_EXPRESSION">CAST('@YYYY.@MM.@DD @hh:@mm:@ss' AS DATETIME)</INFO>
+			</INFOS>
+		</ADDITIONAL>
+	  <MARS ACTIVE="true" MAJOR_VERSION="2" MINOR_VERSION="0"/>
+	</VENDOR>
+    <VENDOR NAME="mssql2008">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">MS-SQL</LABEL>
+		</DISPLAYNAME>
+		<DRIVER>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<JAVA>com.microsoft.sqlserver.jdbc.SQLServerDriver</JAVA>
+			<NET>System.Data.SqlClient.SqlConnection</NET>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<JAVA>jdbc:sqlserver://{serverAddress}:{portNo};DatabaseName={dbName}</JAVA>
+			<NET>Network Library=DBMSSOCN;Data Source={serverAddress},{portNo};Initial Catalog={dbName};User ID={user};Password={password};</NET>
+		</URL>
+		<HANDLER>
+			<JAVA>com.forcs.db.OZMSSQLHandler</JAVA>
+			<NET>com.forcs.db.OZMssqlHandler</NET>
+		</HANDLER>
+		<PARAMETER_FLAG>
+			<NET>@</NET>
+		</PARAMETER_FLAG>
+		<ITEMS>
+			<ITEM KEY="serverAddress">
+				<LABEL LANG="en_us">Database server IP Address</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 IP 주소</LABEL>
+				<LABEL LANG="ja_jp">Database server IP Address</LABEL>
+			</ITEM>
+			<ITEM KEY="portNo" DEFAULTVALUE="1433">
+				<LABEL LANG="en_us">Database server port number</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 포트 번호</LABEL>
+				<LABEL LANG="ja_jp">Database server port number</LABEL>
+			</ITEM>
+			<ITEM KEY="dbName" DEFAULTVALUE="master">
+				<LABEL LANG="en_us">Database name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 이름</LABEL>
+				<LABEL LANG="ja_jp">Database name</LABEL>
+			</ITEM>
+		</ITEMS>
+		<ADDITIONAL>
+			<FIELDTYPES>
+				<FIELDTYPE NAME="DATE">DATETIME</FIELDTYPE>
+			</FIELDTYPES>
+			<INFOS>
+				<INFO KEY="DATE_EXPRESSION">CAST('@YYYY.@MM.@DD @hh:@mm:@ss' AS DATETIME)</INFO>
+			</INFOS>
+		</ADDITIONAL>
+	</VENDOR>
+	<VENDOR NAME="db2">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">IBM-DB2</LABEL>
+		</DISPLAYNAME>
+		<DRIVER SUPPORTFUNCTION="FALSE">
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<JAVA>COM.ibm.db2.jdbc.net.DB2Driver</JAVA>
+			<NET>IBM.Data.DB2.DB2Connection</NET>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<JAVA>jdbc:db2://{serverAddress}:{portNo}/{dbName}</JAVA>
+			<NET>Server={serverAddress}:{portNo};Database={dbName};User ID={user};Password={password};</NET>
+		</URL>
+		<HANDLER>
+			<!-- JAVA 생략하면, OZGeneralHandler 로딩.. -->
+			<NET>com.forcs.db.OZDb2Handler</NET>
+		</HANDLER>
+		<PARAMETER_FLAG>
+			<NET>@</NET>
+		</PARAMETER_FLAG>
+		<ITEMS>
+			<ITEM KEY="serverAddress">
+				<LABEL LANG="en_us">Database server IP Address</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 IP 주소</LABEL>
+				<LABEL LANG="ja_jp">Database server IP Address</LABEL>
+			</ITEM>
+			<ITEM KEY="portNo" DEFAULTVALUE="50000">
+				<LABEL LANG="en_us">Database server port number</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 포트 번호</LABEL>
+				<LABEL LANG="ja_jp">Database server port number</LABEL>
+			</ITEM>
+			<ITEM KEY="dbName">
+				<LABEL LANG="en_us">Database name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 이름</LABEL>
+				<LABEL LANG="ja_jp">Database name</LABEL>
+			</ITEM>
+		</ITEMS>
+		<ADDITIONAL>
+			<FIELDTYPES>
+				<FIELDTYPE NAME="DATE">TIMESTAMP</FIELDTYPE>
+			</FIELDTYPES>
+			<INFOS>
+				<INFO KEY="DATE_EXPRESSION">TO_DATE('@YYYY-@MM-@DD @hh:@mm:@ss', 'YYYY-MM-DD HH24:MI:SS')</INFO>
+			</INFOS>
+		</ADDITIONAL>
+	</VENDOR>
+	<VENDOR NAME="odbc">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">ODBC</LABEL>
+		</DISPLAYNAME>
+		<DRIVER>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<JAVA>sun.jdbc.odbc.JdbcOdbcDriver</JAVA>
+			<NET>System.Data.Odbc.OdbcConnection</NET>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<JAVA>jdbc:odbc:{dsn}</JAVA>
+			<NET>Dsn={dsn};Uid={user};Pwd={password}</NET>
+		</URL>
+		<HANDLER>
+			<NET>com.forcs.db.OZGeneralHandler</NET>
+		</HANDLER>
+		<PARAMETER_FLAG>
+			<NET TYPE="positional">?</NET>
+		</PARAMETER_FLAG>
+		<ITEMS>
+			<ITEM KEY="dsn">
+				<LABEL LANG="en_us">Data Source Name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 드라이버 종류</LABEL>
+				<LABEL LANG="ja_jp">Data Source Name</LABEL>
+			</ITEM>
+		</ITEMS>
+	</VENDOR>
+	<VENDOR NAME="informix">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">INFORMIX</LABEL>
+		</DISPLAYNAME>
+		<DRIVER>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<JAVA>com.informix.jdbc.IfxDriver</JAVA>
+			<NET>IBM.Data.Informix.IfxConnection</NET>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<JAVA>jdbc:Informix-sqli://{serverAddress}:{portNo}/{dbName}:informixserver={serverName}</JAVA>
+			<NET>Host={serverAddress};Service={portNo};Server={serverName};Database={dbName};User ID={user};Password={password};</NET>
+		</URL>
+		<HANDLER>
+			<NET>com.forcs.db.OZInformixHandler</NET>
+		</HANDLER>
+		<ITEMS>
+			<ITEM KEY="serverAddress">
+				<LABEL LANG="en_us">Database server IP Address</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 IP 주소</LABEL>
+				<LABEL LANG="ja_jp">Database server IP Address</LABEL>
+			</ITEM>
+			<ITEM KEY="portNo">
+				<LABEL LANG="en_us">Database server port number</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 포트 번호</LABEL>
+				<LABEL LANG="ja_jp">Database server port number</LABEL>
+			</ITEM>
+			<ITEM KEY="serverName">
+				<LABEL LANG="en_us">Database server name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 이름</LABEL>
+				<LABEL LANG="ja_jp">Database server name</LABEL>
+			</ITEM>
+			<ITEM KEY="dbName">
+				<LABEL LANG="en_us">Database name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 이름</LABEL>
+				<LABEL LANG="ja_jp">Database name</LABEL>
+			</ITEM>
+		</ITEMS>
+	</VENDOR>
+	<VENDOR NAME="sybase">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">SYBASE</LABEL>
+		</DISPLAYNAME>
+		<DRIVER SUPPORTFUNCTION="FALSE">
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<JAVA>com.sybase.jdbc2.jdbc.SybDriver</JAVA>
+			<NET>Sybase.Data.AseClient.AseConnection</NET>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<JAVA>jdbc:sybase:{dsn}:{serverAddress}:{portNo}/{dbName}</JAVA>
+			<NET>Network Library=DBMSSOCN;Data Source={serverAddress},{portNo};Initial Catalog={dbName};User ID={user};Password={password};</NET>
+		</URL>
+		<HANDLER>
+			<NET>com.forcs.db.OZSybaseHandler</NET>
+		</HANDLER>
+		<PARAMETER_FLAG>
+			<NET>@</NET>
+		</PARAMETER_FLAG>
+		<ITEMS>
+			<ITEM KEY="dsn" DEFAULTVALUE="Tds">
+				<LABEL LANG="en_us">Data source name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 드라이버 종류</LABEL>
+				<LABEL LANG="ja_jp">Data source name</LABEL>
+			</ITEM>
+			<ITEM KEY="serverAddress">
+				<LABEL LANG="en_us">Database server IP Address</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 IP 주소</LABEL>
+				<LABEL LANG="ja_jp">Database server IP Address</LABEL>
+			</ITEM>
+			<ITEM KEY="portNo">
+				<LABEL LANG="en_us">Database server port number</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 포트 번호</LABEL>
+				<LABEL LANG="ja_jp">Database server port number</LABEL>
+			</ITEM>
+			<ITEM KEY="dbName">
+				<LABEL LANG="en_us">Database name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 이름</LABEL>
+				<LABEL LANG="ja_jp">Database name</LABEL>
+			</ITEM>
+		</ITEMS>
+		<ADDITIONAL>
+			<FIELDTYPES>
+				<FIELDTYPE NAME="DATE">DATETIME</FIELDTYPE>
+			</FIELDTYPES>
+			<INFOS>
+				<INFO KEY="DATE_EXPRESSION">CONVERT(DATETIME, '@YYYY.@MM.@DD @hh:@mm:@ss')</INFO>
+			</INFOS>
+		</ADDITIONAL>
+	</VENDOR>
+	<VENDOR NAME="unisql">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">UNI-SQL</LABEL>
+		</DISPLAYNAME>
+		<DRIVER>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<JAVA>unisql.jdbc.driver.UniSQLDriver</JAVA>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<JAVA>jdbc:unisql:{serverAddress}:{portNo}:{dbName}:::</JAVA>
+		</URL>
+		<HANDLER/>
+		<ITEMS>
+			<ITEM KEY="serverAddress">
+				<LABEL LANG="en_us">Database server IP Address</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 IP 주소</LABEL>
+				<LABEL LANG="ja_jp">Database server IP Address</LABEL>
+			</ITEM>
+			<ITEM KEY="portNo">
+				<LABEL LANG="en_us">Database server port number</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 포트 번호</LABEL>
+				<LABEL LANG="ja_jp">Database server port number</LABEL>
+			</ITEM>
+			<ITEM KEY="dbName">
+				<LABEL LANG="en_us">Database name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 이름</LABEL>
+				<LABEL LANG="ja_jp">Database name</LABEL>
+			</ITEM>
+		</ITEMS>
+	</VENDOR>
+	<VENDOR NAME="mysql">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">mysql</LABEL>
+		</DISPLAYNAME>
+		<DRIVER>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<JAVA>com.mysql.jdbc.Driver</JAVA>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<JAVA>jdbc:mysql://{serverAddress}:{portNo}/{dbName}</JAVA>
+		</URL>
+		<HANDLER/>
+		<ITEMS>
+			<ITEM KEY="serverAddress">
+				<LABEL LANG="en_us">Database server IP Address</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 IP 주소</LABEL>
+				<LABEL LANG="ja_jp">Database server IP Address</LABEL>
+			</ITEM>
+			<ITEM KEY="portNo">
+				<LABEL LANG="en_us">Database server port number</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 포트 번호</LABEL>
+				<LABEL LANG="ja_jp">Database server port number</LABEL>
+			</ITEM>
+			<ITEM KEY="dbName">
+				<LABEL LANG="en_us">Database name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 이름</LABEL>
+				<LABEL LANG="ja_jp">Database name</LABEL>
+			</ITEM>
+		</ITEMS>
+	</VENDOR>
+	<VENDOR NAME="user">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">User-Defined</LABEL>
+		</DISPLAYNAME>
+		<DRIVER>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<JAVA>{driver}</JAVA>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<JAVA>{url}</JAVA>
+		</URL>
+		<ITEMS>
+			<ITEM KEY="driver">
+				<LABEL LANG="en_us">Driver Class Name</LABEL>
+				<LABEL LANG="ko_kr">드라이버 클래스 이름</LABEL>
+				<LABEL LANG="ja_jp">Driver Class Name</LABEL>
+			</ITEM>
+			<ITEM KEY="url">
+				<LABEL LANG="en_us">Connection URL</LABEL>
+				<LABEL LANG="ko_kr">연결 URL</LABEL>
+				<LABEL LANG="ja_jp">Connection URL</LABEL>
+			</ITEM>
+		</ITEMS>
+	</VENDOR>
+
+	<VENDOR NAME="mssql-oledb">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">mssql-oledb</LABEL>
+		</DISPLAYNAME>
+		<DRIVER>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<NET>System.Data.OleDb.OleDbConnection</NET>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<NET>Provider=SQLOLEDB;Data Source={serverAddress},{portNo};Network Library=DBMSSOCN;initial catalog={dbName};User Id={user};Password={password};</NET>
+		</URL>
+		<HANDLER>
+			<NET>com.forcs.db.OZOLEDBHandler</NET>
+		</HANDLER>
+		<PARAMETER_FLAG>
+			<NET TYPE="positional">?</NET>
+		</PARAMETER_FLAG>
+		<ITEMS>
+			<ITEM KEY="serverAddress">
+				<LABEL LANG="en_us">Database server IP Address</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 IP 주소</LABEL>
+				<LABEL LANG="ja_jp">Database server IP Address</LABEL>
+			</ITEM>
+			<ITEM KEY="portNo">
+				<LABEL LANG="en_us">Database server port number</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 포트 번호</LABEL>
+				<LABEL LANG="ja_jp">Database server port number</LABEL>
+			</ITEM>
+			<ITEM KEY="dbName">
+				<LABEL LANG="en_us">Database name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 이름</LABEL>
+				<LABEL LANG="ja_jp">Database name</LABEL>
+			</ITEM>
+		</ITEMS>
+		<ADDITIONAL>
+			<FIELDTYPES>
+				<FIELDTYPE NAME="DATE">DATETIME</FIELDTYPE>
+			</FIELDTYPES>
+			<INFOS>
+				<INFO KEY="DATE_EXPRESSION">CAST('@YYYY.@MM.@DD @hh:@mm:@ss' AS DATETIME)</INFO>
+			</INFOS>
+		</ADDITIONAL>
+	</VENDOR>
+	<VENDOR NAME="oracle-oledb">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">oracle-oledb</LABEL>
+		</DISPLAYNAME>
+		<DRIVER>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<NET>System.Data.OleDb.OleDbConnection</NET>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<NET>Provider=ORAOLEDB.Oracle;Data Source={sid};User Id={user};Password={password};</NET>
+		</URL>
+		<HANDLER>
+			<NET>com.forcs.db.OZOLEDBHandler</NET>
+		</HANDLER>
+		<PARAMETER_FLAG>
+			<NET TYPE="positional">?</NET>
+		</PARAMETER_FLAG>
+		<ITEMS>
+			<ITEM KEY="sid">
+				<LABEL LANG="en_us">SID</LABEL>
+				<LABEL LANG="ko_kr">SID</LABEL>
+				<LABEL LANG="ja_jp">SID</LABEL>
+			</ITEM>
+		</ITEMS>
+		<ADDITIONAL>
+			<FIELDTYPES>
+				<FIELDTYPE NAME="DATE">DATE</FIELDTYPE>
+			</FIELDTYPES>
+			<INFOS>
+				<INFO KEY="DATE_EXPRESSION">TO_DATE('@YYYY/@MM/@DD @hh:@mm:@ss', 'YYYY/MM/DD hh24:mi:ss')</INFO>
+				<INFO KEY="LIKE_QUERY">like</INFO>
+				<INFO KEY="LIKE_DELEMETER">%</INFO>
+			</INFOS>
+		</ADDITIONAL>
+	</VENDOR>
+	<VENDOR NAME="sybase-oledb">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">sybase-oledb</LABEL>
+		</DISPLAYNAME>
+		<DRIVER>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<NET>System.Data.OleDb.OleDbConnection</NET>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<NET>Provider=Sybase ASE OLE DB Provider;Datasource={dsn};User ID={user};Password={password};</NET>
+		</URL>
+		<HANDLER>
+			<NET>com.forcs.db.OZOLEDBHandler</NET>
+		</HANDLER>
+		<PARAMETER_FLAG>
+			<NET TYPE="positional">?</NET>
+		</PARAMETER_FLAG>
+		<ITEMS>
+			<ITEM KEY="dsn" DEFAULT="Tds">
+				<LABEL LANG="en_us">Data source name</LABEL>
+				<LABEL LANG="ko_kr">데이터 소스 이름</LABEL>
+				<LABEL LANG="ja_jp">Data source name</LABEL>
+			</ITEM>
+		</ITEMS>
+		<ADDITIONAL>
+			<FIELDTYPES>
+				<FIELDTYPE NAME="DATE">DATETIME</FIELDTYPE>
+			</FIELDTYPES>
+			<INFOS>
+				<INFO KEY="DATE_EXPRESSION">CONVERT(DATETIME, '@YYYY.@MM.@DD @hh:@mm:@ss')</INFO>
+			</INFOS>
+		</ADDITIONAL>
+	</VENDOR>
+	<VENDOR NAME="db2-oledb">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">db2-oledb</LABEL>
+		</DISPLAYNAME>
+		<DRIVER>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<NET>System.Data.OleDb.OleDbConnection</NET>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<NET>Provider=IBMDADB2;Data Source={dbName};UID={user};PWD={password};</NET>
+		</URL>
+		<HANDLER>
+			<NET>com.forcs.db.OZOLEDBHandler</NET>
+		</HANDLER>
+		<PARAMETER_FLAG>
+			<NET TYPE="positional">?</NET>
+		</PARAMETER_FLAG>
+		<ITEMS>
+			<ITEM KEY="dbName">
+				<LABEL LANG="en_us">Database name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 이름</LABEL>
+				<LABEL LANG="ja_jp">Database name</LABEL>
+			</ITEM>
+		</ITEMS>
+		<ADDITIONAL>
+			<FIELDTYPES>
+				<FIELDTYPE NAME="DATE">TIMESTAMP</FIELDTYPE>
+			</FIELDTYPES>
+			<INFOS>
+				<INFO KEY="DATE_EXPRESSION">TO_DATE('@YYYY-@MM-@DD @hh:@mm:@ss', 'YYYY-MM-DD HH24:MI:SS')</INFO>
+			</INFOS>
+		</ADDITIONAL>
+	</VENDOR>
+	<VENDOR NAME="informix-oledb">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">informix-oledb</LABEL>
+		</DISPLAYNAME>
+		<DRIVER>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<NET>System.Data.OleDb.OleDbConnection</NET>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<NET>Provider=Ifxoledbc;Data Source={dbName};User ID={user};password={password};</NET>
+		</URL>
+		<HANDLER>
+			<NET>com.forcs.db.OZOLEDBHandler</NET>
+		</HANDLER>
+		<PARAMETER_FLAG>
+			<NET TYPE="positional">?</NET>
+		</PARAMETER_FLAG>
+		<ITEMS>
+			<ITEM KEY="dbName">
+				<LABEL LANG="en_us">Database name</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 이름</LABEL>
+				<LABEL LANG="ja_jp">Database name</LABEL>
+			</ITEM>
+		</ITEMS>
+	</VENDOR>
+    <VENDOR NAME="tibero">
+		<DISPLAYNAME>
+			<LABEL LANG="en_us">TIBERO</LABEL>
+		</DISPLAYNAME>
+		<DRIVER SUPPORTFUNCTION="TRUE">
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">Driver</LABEL>
+			</DISPLAYNAME>
+			<JAVA>com.tmax.tibero.jdbc.TbDriver</JAVA>
+			<NET>System.Data.OleDb.OleDbConnection</NET>
+		</DRIVER>
+		<URL>
+			<DISPLAYNAME>
+				<LABEL LANG="en_us">URL</LABEL>
+			</DISPLAYNAME>
+			<JAVA>jdbc:tibero:thin:@{serverAddress}:{portNo}</JAVA>
+			<NET>Provider=tbprov.Tbprov;Data Source='{serverAddress},{portNo}';User ID={user};Password={password};</NET>
+		</URL>
+		<HANDLER>
+			<NET>com.forcs.db.OZTiberoHandler</NET>
+		</HANDLER>
+		<ITEMS>
+			<ITEM KEY="serverAddress">
+				<LABEL LANG="en_us">Database server IP Address</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 IP 주소</LABEL>
+				<LABEL LANG="ja_jp">Database server IP Address</LABEL>
+			</ITEM>
+			<ITEM KEY="portNo" DEFAULTVALUE="8629">
+				<LABEL LANG="en_us">Database server port number</LABEL>
+				<LABEL LANG="ko_kr">데이터베이스 서버 포트 번호</LABEL>
+				<LABEL LANG="ja_jp">Database server port number</LABEL>
+			</ITEM>
+		</ITEMS>
+	</VENDOR>
+</DBCONNECTION_INFORMATION>

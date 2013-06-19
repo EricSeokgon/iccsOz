@@ -1,0 +1,35 @@
+###
+###    DataBase Connection Pool Properties
+###    Last Modified : Fri Dec 31 14:28:10 KST 2004
+###
+
+#oracle_example
+iccs.vendor=oracle
+#iccs.serverAddress=172.168.1.108
+iccs.serverAddress=home.pktcorp.com
+iccs.portNo=1521
+iccs.sid=orcl
+#iccs.sid=XE
+iccs.user=iccs
+iccs.password=iccs1441$
+iccs.maxconns=20
+iccs.initconns=5
+iccs.timeout=5
+iccs.doConnectionCheck=true
+iccs.testQueryString=select 1 from dual 
+
+
+oracle_example.vendor=oracle
+oracle_example.serverAddress=172.168.1.108
+oracle_example.portNo=1521
+oracle_example.sid=XE
+oracle_example.user=iccs
+oracle_example.password=iccs1441$
+oracle_example.maxconns=20
+oracle_example.initconns=5
+oracle_example.timeout=5
+oracle_example.doConnectionCheck=true
+oracle_example.testQueryString=select 1 from dual 
+
+###    End.
+  

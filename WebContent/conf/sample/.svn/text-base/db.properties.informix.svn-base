@@ -1,0 +1,20 @@
+#
+#  sample configuraion for Informix DBMS
+#
+
+ifx.vendor=informix
+ifx.serverAddress=127.0.0.1
+ifx.portNo=1526
+ifx.serverName=OZServer
+ifx.dbName=sysutils
+ifx.user=informix
+ifx.password=informix
+ifx.maxconns=20
+ifx.initconns=5
+ifx.timeout=5
+ifx.doConnectionCheck=false
+ifx.sessionQuery=
+ifx.doConnectionCheck=
+ifx.testQueryString=
+ifx.decodecharset=
+ifx.encodecharset=

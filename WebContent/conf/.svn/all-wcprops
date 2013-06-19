@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf
+END
+db.properties
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/db.properties
+END
+spmgr.properties
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/spmgr.properties
+END
+monitor.properties
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/monitor.properties
+END
+uslmngr.properties
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/uslmngr.properties
+END
+dbconfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/dbconfig.xml
+END
+xml.properties
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/xml.properties
+END
+mail.properties
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/mail.properties
+END
+server_error_msg_en_us.xml
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/server_error_msg_en_us.xml
+END
+cachemngr.properties
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/cachemngr.properties
+END
+srmngr.properties
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/srmngr.properties
+END
+conf.zip
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/conf.zip
+END
+ozservice.properties
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/ozservice.properties
+END
+repository.properties
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/repository.properties
+END
+databind.properties
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/databind.properties
+END
+dbconfig.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/dbconfig.xsd
+END
+datasource.properties
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/datasource.properties
+END
+log.properties
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/log.properties
+END
+sap.properties
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sap.properties
+END

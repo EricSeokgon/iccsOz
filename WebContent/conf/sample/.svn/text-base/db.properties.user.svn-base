@@ -1,0 +1,18 @@
+#
+#  sample configuraion for User Custom DBMS
+#
+
+user_example1.vendor=user
+user_example1.driver=oracle.jdbc.driver.OracleDriver
+user_example1.url=jdbc:oracle:thin:@127.0.0.1:1521:forcs815
+user_example1.props=user=oz;password=oz
+user_example1.user=oz
+user_example1.maxconns=20
+user_example1.initconns=5
+user_example1.timeout=5
+user_example1.doConnectionCheck=false
+user_example1.sessionQuery=
+user_example1.doConnectionCheck=
+user_example1.testQueryString=
+user_example1.decodecharset=
+user_example1.encodecharset=

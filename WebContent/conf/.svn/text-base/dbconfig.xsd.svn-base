@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="t_LABEL">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="LANG" type="xsd:string" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="t_DISPLAYNAME">
+		<xsd:sequence>
+			<xsd:element name="LABEL" type="t_LABEL" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="t_DRIVER">
+		<xsd:sequence>
+			<xsd:element name="DISPLAYNAME" type="t_DISPLAYNAME" />
+			<xsd:element name="JAVA" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="NET" type="xsd:string" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="t_HANDLER">
+		<xsd:sequence>
+			<xsd:element name="JAVA" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="NET" type="xsd:string" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="t_PARAMETERFLAG">
+		<xsd:sequence>
+			<xsd:element name="JAVA" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="NET" type="xsd:string" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+		<xsd:attribute name="TYPE" type="xsd:string" use="optional" />
+	</xsd:complexType>
+	
+	<xsd:complexType name="t_ITEM">
+		<xsd:sequence>
+			<xsd:element name="LABEL" type="t_LABEL" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="KEY" type="xsd:string" use="required" />
+		<xsd:attribute name="USE_PROPERTY" type="xsd:string" use="optional" />
+		<xsd:attribute name="DEFAULT" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="t_ITEMS">
+		<xsd:sequence>
+			<xsd:element name="ITEM" type="t_ITEM" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="t_FIELDTYPE">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="NAME" type="xsd:string" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="t_FIELDTYPES">
+		<xsd:sequence>
+			<xsd:element name="FIELDTYPE" type="t_FIELDTYPE" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="t_INFO">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="KEY" type="xsd:string" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="t_INFOS">
+		<xsd:sequence>
+			<xsd:element name="INFO" type="t_INFO" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="t_ADDITIONAL">
+		<xsd:sequence>
+			<xsd:element name="FIELDTYPES" type="t_FIELDTYPES" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="INFOS" type="t_INFOS" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="t_MARS">
+		<xsd:attribute name="ACTIVE" type="xsd:string" use="required" />
+		<xsd:attribute name="MAJOR_VERSION" type="xsd:string" use="optional" />
+		<xsd:attribute name="MINOR_VERSION" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="t_VENDOR">
+		<xsd:sequence>
+			<xsd:element name="DISPLAYNAME" type="t_DISPLAYNAME" />
+			<xsd:element name="DRIVER" type="t_DRIVER"/>
+			<xsd:element name="URL" type="t_DRIVER"/>
+			<xsd:element name="HANDLER" type="t_HANDLER" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="PARAMETER_FLAG" type="t_PARAMETERFLAG" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ITEMS" type="t_ITEMS" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ADDITIONAL" type="t_ADDITIONAL" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="MARS" type="t_MARS"  minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+		<xsd:attribute name="NAME" type="xsd:string" use="required" />
+	</xsd:complexType>
+	
+	<xsd:element name="VENDOR" type="t_VENDOR" />
+	
+	<xsd:element name="DBCONNECTION_INFORMATION">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="VENDOR" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+</xsd:schema>
+

@@ -1,0 +1,31 @@
+;Message file for OZ Report ActiveX viewer 3.1
+
+ozrviewer=実行ファイルをインストールしています。
+;copy executables & mandatory files
+
+ozxlswriter=excelのエクスポートライブラリをインストールしています。
+;copy DLLs for excel export
+
+ozjpdf417=PDF417のエクスポートライブラリをインストールしています。
+;copy DLLs for ozjpdf417 export
+
+ozpdfwriter=PDFのエクスポートライブラリをインストールしています。
+;copy DLLs for pdf export
+
+ozppt=PPTのエクスポートライブラリをインストールしています。
+;copy DLLs for ppt export
+
+ozrviewerocx=OZ Report Viewer OCXをインストールしています。
+;register ocx
+
+ozrresource=リソースライブラリをインストールしています。
+;copy resource files
+
+ozsystem=メインライブラリをインストールしています。
+;copy user files
+
+ozrhelp=ヘルプファイルをインストールしています。
+;copy help files
+
+ozruser=ユーザライブラリをインストールしています。
+;copy user files

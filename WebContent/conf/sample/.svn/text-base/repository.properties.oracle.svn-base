@@ -1,0 +1,13 @@
+REPOSITORY_TYPE=RDB
+RDB.lidName=test
+RDB.vendor=oracle
+RDB.dsn=thin
+RDB.serverAddress=127.0.0.1
+RDB.portNum=1521
+RDB.serverName=forcs
+RDB.dbName=
+RDB.enCharSet=
+RDB.deCharSet=
+RDB.userName=lid
+RDB.password=aaaa
+RDB.subprotocolName=

@@ -1,0 +1,49 @@
+###
+###    Repository Properties
+###    Last Modified : Wed Oct 15 13:29:05 KST 2003
+###
+
+
+#Repository DB properties ( when REPOSITORY_TYPE is RDB )
+
+# RDB, BUILTIN, USER
+
+#
+# DB alias in /conf/db.properties to use repository
+#
+# note: ignored if REPOSITORY_TYPE is BUILTIN
+#
+#REPOSITORY_TYPE = RDB
+#REPOSITORY_DB_ALIAS = 
+
+#REPOSITORY_TYPE = BUILTIN
+REPOSITORY_TYPE = NONE
+REPOSITORY_FILE_PATH = %OZ_HOME%/repository_files/
+
+#BackUp History for None Type 
+REPOSITORY_NONE_BACKUP=false                                
+REPOSITORY_NONE_BACKUP_PATH=%OZ_HOME%/repository_files_bak/
+REPOSITORY_NONE_BACKUP_ITEM_COUNT=10                       
+REPOSITORY_NONE_BACKUP_ITEM_VALIDDAYS=0 
+
+
+#Item file save number per a directory
+#Default value is 500
+#The value must be lager than 0 
+
+REPOSITORY_ITEM_NUMBER_PER_DIRECTORY = 500
+
+#History item's valid days ( The history item over the value of day is deleted, when check in the item ) 
+#Default value is 30
+#The 0 value is disable.
+
+REPOSITORY_HISTORY_ITEM_VALID_DAYS = 10
+
+#Temp Directory
+REPOSITORY_TEMP_DIRECTORY=%OZ_HOME%/temp
+
+#Get Repository Items (Get Method)
+REPOSITORY_ACCESS_BY_HTTP_GET=false
+REPOSITORY_HTTP_GET_CHECK_SESSION=false
+
+

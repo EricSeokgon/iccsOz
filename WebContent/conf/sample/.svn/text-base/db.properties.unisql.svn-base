@@ -1,0 +1,19 @@
+#
+#  sample configuraion for UNISql
+#
+
+unisql_example.vendor=unisql
+unisql_example.serverAddress=127.0.0.1
+unisql_example.dbName=demodb
+unisql_example.portNo=44300
+unisql_example.user=
+unisql_example.password=
+unisql_example.maxconns=20
+unisql_example.initconns=5
+unisql_example.timeout=5
+unisql_example.doConnectionCheck=false
+unisql_example.sessionQuery=
+unisql_example.doConnectionCheck=
+unisql_example.testQueryString=
+unisql_example.decodecharset=
+unisql_example.encodecharset=

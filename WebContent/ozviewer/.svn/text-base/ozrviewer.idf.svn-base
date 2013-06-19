@@ -1,0 +1,99 @@
+[IDF]
+version=5000,2009,0311,200
+formatversion=1,0,0,1
+checkrootversion=false
+stoponerror=false
+msgonerror=false
+AssureAll=false
+messagefile=ozrviewer.message
+
+;copy executables & mandatory files
+[ozrviewer]
+entryversion=5000,2009,0311,200
+file=ozrviewer.zip
+compress=zip
+destdir=<THIS>/ozviewer
+AutoRunEnable=true
+AutoRunExtension=ozd
+AutoRunFileName=ozcviewer.exe
+
+;copy dll files for excel export
+[ozrxlswriter]
+entryversion=5000,2009,0311,200
+file=ozxlswriter.zip
+compress=zip
+destDir=<THIS>/ozviewer
+
+;copy DLLs for ozjpdf417 export
+[ozjpdf417]
+entryversion=5000,2009,0311,200
+file=ozjpdf417.zip
+compress=zip
+destdir=<THIS>/ozviewer
+
+;copy DLLs for PDF export
+[ozpdfwriter]
+entryversion=5000,2009,0311,200
+file=ozpdfwriter.zip
+compress=zip
+destdir=<THIS>/ozviewer
+
+;copy DLLs for PPT export
+[ozppt]
+entryversion=5000,2009,0311,200
+file=ozppt.zip
+compress=zip
+destdir=<THIS>/ozviewer
+
+;register ocx
+[ozrviewerocx]
+entryversion=5000,2009,0311,200
+file=ozrviewerocx.zip
+entry=ozcuviewer.ocx
+compress=zip
+clsid={0DEF32F8-170F-46f8-B1FF-4BF7443F5F25}
+command=registerserver
+destdir=<THIS>/ozviewer
+
+;copy resource files
+[ozrresource]
+entryversion=5000,2009,0311,200
+file=ozrresource.zip
+compress=zip
+destdir=<THIS>/ozviewer/res
+
+;copy system files
+[ozsystem]
+entryversion=5000,2009,0311,200
+file=ozsystem.zip
+compress=zip
+comparefile=unicows.dll
+compareoption=exist
+destdir=<IE>,<THIS>/ozviewer
+destOS=win98
+
+[ozgdiplus]
+entryversion=5000,2009,0311,200
+file=ozgdiplus.zip
+compress=zip
+comparefile=gdiplus.dll
+compareoption=exist
+destdir=<SYSTEM>
+destOS=-win2k
+
+; 이 아래로는 필요에 의해 첨부/제거 할 수 있음
+;copy help files
+[ozrhelp]
+entryversion=5000,2009,0311,200
+file=ozrhelp.zip
+compress=zip
+destdir=<THIS>/ozviewer/help
+
+;copy user files
+[ozruser]
+entryversion=5000,2009,0311,200
+file=ozruser.zip
+compress=zip
+destdir=<THIS>/ozviewer
+
+

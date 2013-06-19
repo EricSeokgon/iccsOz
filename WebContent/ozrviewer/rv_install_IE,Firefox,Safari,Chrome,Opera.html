@@ -1,0 +1,20 @@
+<html>
+<head>
+    <script language = "JavaScript" src = "http://127.0.0.1:8080/ztransferx_browers.js"></script>
+</head>
+<body>
+
+<div id = "InstallOZViewer">
+    <script language = "JavaScript">
+        Initialize_ZT("ZTransferX", "CLSID:C7C7225A-9476-47AC-B0B0-FF3B79D55E67", "0", "0", "http://127.0.0.1:8080/ozrviewer/ZTransferX_2,2,1,9.cab#version=2,2,1,9");
+        Insert_ZT_Param("download.Server", "http://127.0.0.1/ozrviewer/");
+        Insert_ZT_Param("download.Port", "8080");
+        Insert_ZT_Param("download.Instruction", "ozrviewer.idf");
+        Insert_ZT_Param("install.Base", "<PROGRAMS>/Forcs");
+        Insert_ZT_Param("install.Namespace", "custom_namespace");
+        Start_ZT();
+    </script>
+</div>
+
+</body>
+</html>

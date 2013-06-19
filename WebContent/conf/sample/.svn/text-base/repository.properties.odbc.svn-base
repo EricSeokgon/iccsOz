@@ -1,0 +1,7 @@
+REPOSITORY_TYPE=RDB
+RDB.vendor=odbc
+RDB.dsn=repository
+RDB.user=
+RDB.password=
+RDB.enCharSet=
+RDB.deCharSet=

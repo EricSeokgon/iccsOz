@@ -1,0 +1,33 @@
+<ClientList use='false'> 
+
+<Client checkAll='true'>
+	<MACAddress checkAll='false'>
+		<Item>00-34-25-f1-61-45</Item>
+		<Item>00-14-85-f1-68-22</Item>
+	</MACAddress>
+	<IPAddress checkAll='false'>
+		<Item>127.0.0.1</Item>
+    <Item>218.36.12.xx</Item>
+	</IPAddress>
+	<HDDSerial checkAll='false'>
+		<Item>S07HJ1LL200778</Item>
+    <Item>L623471</Item>
+	</HDDSerial>
+</Client>
+
+<Client checkAll='true'>
+	<MACAddress checkAll='false'>
+		<Item>00-0f-ea-fy-9a-6a</Item>
+	</MACAddress>
+	<IPAddress checkAll='true'>
+		<Item>211.116.251.xxx</Item>
+		<Item>218.36.12.xxx</Item>
+	</IPAddress>
+	<HDDSerial checkAll='false'>
+		<Item>S0AFJ10Y7064418</Item>
+		<Item>5JT3G3KT</Item>
+	</HDDSerial>
+</Client>
+
+</ClientList>
+

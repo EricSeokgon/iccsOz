@@ -1,0 +1,198 @@
+#
+#  sample configuraion for using data source of several WAS(Web Application Server)
+#
+
+#
+# Set JDBC Driver using JNDI.
+# com.forcs.jdbc.JNDIJDBCDriver is provided by FORCS
+# in order to use DataSource.
+#
+ds_example.driver=com.forcs.jdbc.JNDIJDBCDriver
+
+#
+# URL Naming Rule
+# forcs:<jndi_context_factory_name>:<user>:<password>:<jndi_source_name>
+# forcs:<jndi_context_factory_name>:<jndi_source_name>
+#
+
+
+# WebLogic example
+ds_example.vendor=user
+ds_example.driver=com.forcs.jdbc.JNDIJDBCDriver
+ds_example.url=forcs:weblogic.jndi.WLInitialContextFactory:<DataSource Name>
+ds_example.maxconns=0
+ds_example.initconns=0
+ds_example.timeout=5
+ds_example.doConnectionCheck=false
+ds_example.sessionQuery=
+ds_example.doConnectionCheck=
+ds_example.testQueryString=
+ds_example.decodecharset=
+ds_example.encodecharset=
+
+
+# WebSphere Version 3.0.x, 3.5.x example
+ds_example.vendor=user
+ds_example.driver=com.forcs.jdbc.JNDIJDBCDriver
+ds_example.url=forcs:com.ibm.ejs.ns.jndi.CNInitialContextFactory:<DataSource Name>
+ds_example.maxconns=0
+ds_example.initconns=0
+ds_example.timeout=5
+ds_example.doConnectionCheck=false
+ds_example.sessionQuery=
+ds_example.doConnectionCheck=
+ds_example.testQueryString=
+ds_example.decodecharset=
+ds_example.encodecharset=
+
+
+# WebSphere over Version 4.0 example
+ds_example.vendor=user
+ds_example.driver=com.forcs.jdbc.JNDIJDBCDriver
+ds_example.url=forcs:com.ibm.websphere.naming.WsnInitialContextFactory:<DataSource Name>
+ds_example.maxconns=0
+ds_example.initconns=0
+ds_example.timeout=5
+ds_example.doConnectionCheck=false
+ds_example.sessionQuery=
+ds_example.doConnectionCheck=
+ds_example.testQueryString=
+ds_example.decodecharset=
+ds_example.encodecharset=
+
+
+# WebSphere over Version 5.x, 6.x example1 (global binding)
+ds_example.vendor=user
+ds_example.driver=com.forcs.jdbc.JNDIJDBCDriver
+ds_example.url=forcs:com.ibm.websphere.naming.WsnInitialContextFactory:jdbc/datasource_name
+ds_example.maxconns=0
+ds_example.initconns=0
+ds_example.timeout=5
+ds_example.doConnectionCheck=false
+ds_example.sessionQuery=
+ds_example.doConnectionCheck=
+ds_example.testQueryString=
+ds_example.decodecharset=
+ds_example.encodecharset=
+
+
+# WebSphere over Version 5.x, 6.x example2 (local binding)
+ds_example.vendor=user
+ds_example.driver=com.forcs.jdbc.JNDIJDBCDriver
+ds_example.url=forcs:com.ibm.websphere.naming.WsnInitialContextFactory:java:comp/env/jdbc/datasource_name
+ds_example.maxconns=0
+ds_example.initconns=0
+ds_example.timeout=5
+ds_example.doConnectionCheck=false
+ds_example.sessionQuery=
+ds_example.doConnectionCheck=
+ds_example.testQueryString=
+ds_example.decodecharset=
+ds_example.encodecharset=
+
+
+# WebSphere over Version 5.x, 6.x example3 (local binding)
+ds_example.vendor=user
+ds_example.driver=com.forcs.jdbc.JNDIJDBCDriver
+ds_example.url=forcs:com.forcs.jndi.ContextFatory:java:comp/env/jdbc/datasource_name
+ds_example.maxconns=0
+ds_example.initconns=0
+ds_example.timeout=5
+ds_example.doConnectionCheck=false
+ds_example.sessionQuery=
+ds_example.doConnectionCheck=
+ds_example.testQueryString=
+ds_example.decodecharset=
+ds_example.encodecharset=
+
+
+# Jeus example
+ds_example.vendor=user
+ds_example.driver=com.forcs.jdbc.JNDIJDBCDriver
+ds_example.url=forcs:jeus.jndi.JEUSContextFactory:<DataSource Name>
+ds_example.maxconns=0
+ds_example.initconns=0
+ds_example.timeout=5
+ds_example.doConnectionCheck=false
+ds_example.sessionQuery=
+ds_example.doConnectionCheck=
+ds_example.testQueryString=
+ds_example.decodecharset=
+ds_example.encodecharset=
+
+
+# iPlanet example
+#   Notice : DataSource Name include "jdbc/" in case of iPlanet
+#            ex) jdbc/ecfcDS
+ds_example.vendor=user
+ds_example.driver=com.forcs.jdbc.JNDIJDBCDriver
+ds_example.url=forcs:com.netscape.server.jndi.RootContextFactory:<DataSource Name>
+ds_example.maxconns=0
+ds_example.initconns=0
+ds_example.timeout=5
+ds_example.doConnectionCheck=false
+ds_example.sessionQuery=
+ds_example.doConnectionCheck=
+ds_example.testQueryString=
+ds_example.decodecharset=
+ds_example.encodecharset=
+
+
+# JRUN example
+ds_example.vendor=user
+ds_example.driver=com.forcs.jdbc.JNDIJDBCDriver
+ds_example.url=forcs:jrun.naming.JRunContextFactory:<DataSource Name>
+ds_example.maxconns=0
+ds_example.initconns=0
+ds_example.timeout=5
+ds_example.doConnectionCheck=false
+ds_example.sessionQuery=
+ds_example.doConnectionCheck=
+ds_example.testQueryString=
+ds_example.decodecharset=
+ds_example.encodecharset=
+
+
+# Tomcat example
+ds_example.vendor=user
+ds_example.driver=com.forcs.jdbc.JNDIJDBCDriver
+ds_example.url=forcs:tomcat:<DataSource Name>
+ds_example.maxconns=0
+ds_example.initconns=0
+ds_example.timeout=5
+ds_example.doConnectionCheck=false
+ds_example.sessionQuery=
+ds_example.doConnectionCheck=
+ds_example.testQueryString=
+ds_example.decodecharset=
+ds_example.encodecharset=
+
+
+# JBoss example
+ds_example.vendor=user
+ds_example.driver=com.forcs.jdbc.JNDIJDBCDriver
+ds_example.url=forcs:jboss:<DataSource Name>
+ds_example.maxconns=0
+ds_example.initconns=0
+ds_example.timeout=5
+ds_example.doConnectionCheck=false
+ds_example.sessionQuery=
+ds_example.doConnectionCheck=
+ds_example.testQueryString=
+ds_example.decodecharset=
+ds_example.encodecharset=
+
+
+# In case not exist ContextFactory Example (Interstage, Oracle Application Server etc...)
+ds_example.vendor=user
+ds_example.driver=com.forcs.jdbc.JNDIJDBCDriver
+ds_example.url=forcs:com.forcs.jndi.ContextFatory:<DataSource Name>
+ds_example.maxconns=0
+ds_example.initconns=0
+ds_example.timeout=5
+ds_example.doConnectionCheck=false
+ds_example.sessionQuery=
+ds_example.doConnectionCheck=
+ds_example.testQueryString=
+ds_example.decodecharset=
+ds_example.encodecharset=

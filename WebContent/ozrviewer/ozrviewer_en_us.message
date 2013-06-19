@@ -1,0 +1,32 @@
+;Message file for Oz ActiveX viewer 3.0
+
+ozrviewer=OZ Report Binary files Install..
+;copy executables & mandatory files
+
+ozxlswriter=Excel Export DLL Install..
+;copy DLLs for excel export
+
+ozjpdf417=PDF 417 Export DLL Install..
+;copy DLLs for ozjpdf417 export
+
+ozpdfwriter=PDF Export DLL Install..
+;copy DLLs for PDF export
+
+ozppt=PPT Export DLL Install..
+;copy DLLs for ppt export
+
+ozrviewerocx=OZ Report OCX Register Install..
+;register ocx
+
+ozrresource=OZ Report Resource Files Install..
+;copy resource files
+
+ozsystem=OZ Common System DLL File Install..
+;copy user files
+
+ozrhelp=OZ Help File Install..
+;copy help files
+
+ozruser=OZ User Component DLL Files Install..
+;copy user files
+

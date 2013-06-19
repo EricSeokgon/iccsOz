@@ -1,0 +1,32 @@
+;Message file for Oz ActiveX viewer 3.0
+
+ozrviewer=安裝執行檔以及其他重要檔
+;copy executables & mandatory files
+
+ozexcel=安裝輸出有關excel DLL文件
+;copy DLLs for excel export
+
+ozjpdf417=安裝?出有關pdf417 DLL文件
+;copy DLLs for pdf417 export
+
+ozpdfwriter=安裝?出有關pdf DLL文件
+;copy DLLs for pdf export
+
+ozppt=安裝?出有關ppt DLL文件
+;copy DLLs for ppt export
+
+ozrviewerocx=安裝ocx檔
+;register ocx
+
+ozrresource=安裝語言有關DLL檔以及資訊XML檔
+;copy resource files
+
+ozsystem=安裝系統DLL檔
+;copy user files
+
+ozrhelp=安裝HELP檔
+;copy help files
+
+ozruser=安裝自定義DLL檔
+;copy user files
+

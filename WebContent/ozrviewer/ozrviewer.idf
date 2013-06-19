@@ -1,0 +1,101 @@
+[IDF]
+version=5100,2011,0121,100
+formatversion=1,0,0,1
+checkrootversion=false
+stoponerror=false
+msgonerror=false
+AssureAll=false
+messagefile=ozrviewer.message
+
+;copy executables & mandatory files
+[ozrviewer]
+entryversion=5100,2011,0121,100
+file=ozrviewer.zip
+compress=zip
+destdir=<THIS>/ozviewer
+AutoRunEnable=true
+AutoRunExtension=ozd
+AutoRunFileName=ozcviewer.exe
+entry=OZExportForVista.dll
+clsid={10FEAD82-05C2-4F9F-9D3B-C15D809F746D}
+command=registerserver
+
+;register ocx
+[ozrviewerocx]
+entryversion=5100,2011,0121,100
+file=ozrviewerocx.zip
+entry=ozcuviewer.ocx
+compress=zip
+destdir=<THIS>/ozviewer
+clsid={0DEF32F8-170F-46f8-B1FF-4BF7443F5F25}
+command=registerserver
+
+;copy resource files
+[ozrresource]
+entryversion=5100,2011,0121,100
+file=ozrresource.zip
+compress=zip
+destdir=<THIS>/ozviewer/res
+
+;copy dll files for excel export
+[ozrxlswriter]
+entryversion=5100,2011,0121,100
+file=ozxlswriter.zip
+compress=zip
+destDir=<THIS>/ozviewer
+
+;copy DLLs for ozjpdf417 export
+[ozjpdf417]
+entryversion=5100,2011,0121,100
+file=ozjpdf417.zip
+compress=zip
+destdir=<THIS>/ozviewer
+
+;copy DLLs for PDF export
+[ozpdfwriter]
+entryversion=5100,2011,0121,100
+file=ozpdfwriter.zip
+compress=zip
+destdir=<THIS>/ozviewer
+
+;copy DLLs for PPT export
+[ozppt]
+entryversion=5100,2011,0121,100
+file=ozppt.zip
+compress=zip
+destdir=<THIS>/ozviewer
+
+;copy system files
+[ozsystem]
+entryversion=5100,2011,0121,100
+file=ozsystem.zip
+compress=zip
+comparefile=unicows.dll
+compareoption=exist
+destdir=<IE>,<THIS>/ozviewer
+destOS=win98
+
+[ozgdiplus]
+entryversion=5100,2011,0121,100
+file=ozgdiplus.zip
+compress=zip
+comparefile=gdiplus.dll
+compareoption=exist
+destdir=<SYSTEM>
+destOS=-win2k
+
+;copy help files
+[ozrhelp]
+entryversion=5100,2011,0121,100
+file=ozrhelp.zip
+compress=zip
+destdir=<THIS>/ozviewer/help
+
+;copy user files
+[ozruser]
+entryversion=5100,2011,0121,100
+file=ozruser.zip
+compress=zip
+destdir=<THIS>/ozviewer
+
+

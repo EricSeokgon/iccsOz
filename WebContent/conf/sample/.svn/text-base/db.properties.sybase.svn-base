@@ -1,0 +1,20 @@
+#
+#  sample configuraion for Sybase
+#
+
+sybase1.vendor=sybase
+sybase1.dsn=Tds
+sybase1.serverAddress=127.0.0.1
+sybase1.dbName=master
+sybase1.portNo=4100
+sybase1.user=sa
+sybase1.password=sybase
+sybase1.maxconns=20
+sybase1.initconns=5
+sybase1.timeout=5
+sybase1.doConnectionCheck=false
+sybase1.sessionQuery=
+sybase1.doConnectionCheck=
+sybase1.testQueryString=
+sybase1.decodecharset=
+sybase1.encodecharset=

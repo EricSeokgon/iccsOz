@@ -1,0 +1,34 @@
+;Message file for OZ Report Viewer
+
+ozrviewer=리포트 뷰어 실행 파일과 필수 파일 설치
+;copy executables & mandatory files
+
+ozrviewerocx=리포트 뷰어 ActiveX Control 파일 설치
+;register ocx
+
+ozrresource=리포트 뷰어 리소스 파일 설치
+;copy resource files
+
+ozrxlswriter=엑셀 익스포트 모듈 설치
+;copy DLLs for excel export
+
+ozjpdf417=PDF 417 익스포트 모듈 설치
+;copy DLLs for ozjpdf417 export
+
+ozpdfwriter=PDF 익스포트 모듈 설치
+;copy DLLs for PDF export
+
+ozppt=PPT 익스포트 모듈 설치
+;copy DLLs for ppt export
+
+ozsystem=시스템 관련 모듈 설치
+;copy user files
+
+ozgdiplus=GDI Plus 모듈 설치
+;copy gdiplus files
+
+ozrhelp=리포트 뷰어 도움말 파일 설치
+;copy help files
+
+ozruser=사용자 컴포넌트 모듈 설치
+;copy user files

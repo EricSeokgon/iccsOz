@@ -1,0 +1,24 @@
+<html>
+<body>
+
+<div id = "InstallOZViewer">
+    <object ID = "ZTransferX" classid = "CLSID:C7C7225A-9476-47AC-B0B0-FF3B79D55E67" width = "0" height = "0" codebase = "http://127.0.0.1:8080/ozrviewer/ZTransferX_2,2,1,9.cab#version=2,2,1,9">
+    <param name = "download.Server" value = "http://127.0.0.1/ozrviewer/">
+    <param name = "download.Port" value = "8080">
+    <param name = "download.Instruction" value = "ozrviewer.idf">
+    <param name = "install.Base" value = "<PROGRAMS>/Forcs">
+    <param name = "install.Namespace" value = "custom_namespace">
+    </object>
+</div>
+
+<div id = "RunOZViewer">
+    <object id = "OZReportViewer" CLASSID = "CLSID:0DEF32F8-170F-46f8-B1FF-4BF7443F5F25" width = "100%" height = "100%">
+    <param name = "connection.servlet" value = "http://127.0.0.1:8080/oz51/server">
+    <param name = "connection.reportname" value = "category_path/sample.ozr">
+    <param name = "viewer.isframe" value = "false">
+    <param name = "viewer.namespace" value = "custom_namespace\\ozviewer">
+    </object>
+</div>
+
+</body>
+</html>

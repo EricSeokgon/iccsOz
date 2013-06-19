@@ -1,0 +1,1 @@
+ozcntrl.sh -local.version

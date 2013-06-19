@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sample
+END
+db.properties.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sample/db.properties.datasource
+END
+db.properties.odbc
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sample/db.properties.odbc
+END
+db.properties.sybase
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sample/db.properties.sybase
+END
+clientlist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sample/clientlist.xml
+END
+external.properties.sample
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sample/external.properties.sample
+END
+db.properties.informix
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sample/db.properties.informix
+END
+repository.properties.oracle
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sample/repository.properties.oracle
+END
+db.properties.user
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sample/db.properties.user
+END
+db.properties.oracle
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sample/db.properties.oracle
+END
+db.properties.db2
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sample/db.properties.db2
+END
+db.properties.unisql
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sample/db.properties.unisql
+END
+repository.properties.odbc
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sample/repository.properties.odbc
+END
+db.properties.mssql
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/65/iccsOz/WebContent/conf/sample/db.properties.mssql
+END

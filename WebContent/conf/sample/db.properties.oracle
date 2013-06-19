@@ -1,0 +1,19 @@
+#
+#  sample configuraion for Oracle
+#
+
+oracle_example.vendor=oracle
+oracle_example.serverAddress=127.0.0.1
+oracle_example.portNo=1521
+oracle_example.sid=ORCL
+oracle_example.user=oz
+oracle_example.password=oz
+oracle_example.maxconns=20
+oracle_example.initconns=5
+oracle_example.timeout=5
+oracle_example.doConnectionCheck=false
+oracle_example.sessionQuery=
+oracle_example.doConnectionCheck=
+oracle_example.testQueryString=
+oracle_example.decodecharset=
+oracle_example.encodecharset=
